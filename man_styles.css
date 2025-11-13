@@ -5,6 +5,14 @@
   padding:0;
   box-sizing: border-box;
 }
+
+header {
+    background-color: linear-gradient(to right, #cc7321 0%, #c4790a 100%);
+    color: white;
+    text-align: center;
+    font-family: "arial", sans-serif;
+    font-size: 24px;
+}
 #container{
   position:absolute;
   top:50%;
