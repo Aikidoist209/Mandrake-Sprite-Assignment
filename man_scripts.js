@@ -44,10 +44,18 @@ window.addEventListener('load',function(){
   } 
   
   const mandrake = new Mandrake(canvas.width,canvas.height);
+  const backgroundImage = document.getElementById('background');
 
   
   function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
+    
+    // Draw background image first
+    if(backgroundImage.complete){
+      ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    }
+    
+    // Draw mandrake sprite on top
     mandrake.draw(ctx);
     mandrake.update();
     requestAnimationFrame(animate);
